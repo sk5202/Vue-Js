@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>demo vue js- smiten kalathiya</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+  <body>
+      <noscript>
+          <strong>We're sorry but client-app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      </noscript>
+      <div id="app"></div>
+
+      <div id="changelogo" class="newapp">
+         
+          <button v-on:click="reverseMessage" style="text-align:center;">Swap logo</button>
+      </div>
+
+      <script type="text/javascript">
+          var app = new Vue({
+                  el: '#changelogo',
+                  data: {
+                    message: 'Hello Vue.js!'
+                  },
+                  methods: {
+                      reverseMessage: function () {
+                         
+                          if (document.getElementById("hintidentifier").value == "dotnetcore") {
+                              document.getElementById("newlogo").src = "/img/logo.a55db41c.png";
+                              document.getElementById("hintidentifier").value = "csharpcorner"
+                          }
+                          else {
+                              document.getElementById("newlogo").src = "/img/dotnetcore-vue.a30deec8.jpg";
+                              document.getElementById("hintidentifier").value = "dotnetcore"
+                          }
+                                               //this.message = this.message.split('').reverse().join('')
+                    }
+                  }
+            })
+      </script>
+      <!-- built files will be auto injected -->
+  </body>
+</html>
